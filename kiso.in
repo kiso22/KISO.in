@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KISO - Premium T-Shirts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Header with Search Bar -->
+  <header class="bg-black text-white p-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-2xl font-bold">KISO</div>
+      <div class="w-full md:w-1/2">
+        <input type="text" placeholder="Search for T-Shirts..." class="w-full px-4 py-2 rounded text-black"/>
+      </div>
+      <nav>
+        <a href="#products" class="mx-2 hover:underline">Products</a>
+        <a href="#contact" class="mx-2 hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-16 bg-gray-100">
+    <h2 class="text-4xl font-bold mb-4">Style Meets Statement</h2>
+    <p class="text-lg text-gray-600 mb-6">Unique Premium T-shirts. Handmade. Hassle-free orders via WhatsApp or Card.</p>
+    <a href="#products" class="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800">Explore Collection</a>
+  </section>
+
+  <!-- Product Grid -->
+  <section id="products" class="max-w-7xl mx-auto py-12 px-4">
+    <h3 class="text-3xl font-bold mb-6 text-center">Our Best Sellers</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Product Card -->
+      <div class="border rounded-xl overflow-hidden shadow-md">
+        <img src="images/9.jpeg" alt="T-shirt 1" class="w-full h-64 object-cover" />
+        <div class="p-4 space-y-2">
+          <h4 class="text-xl font-semibold">Motivational Quote Tee</h4>
+          <p class="text-gray-600">Price: ₹499</p>
+
+          <!-- Size & Color Options -->
+          <div class="flex gap-2 text-sm">
+            <select class="border rounded px-2 py-1">
+              <option>Size: M</option>
+              <option>Size: L</option>
+              <option>Size: XL</option>
+            </select>
+            <select class="border rounded px-2 py-1">
+              <option>Color: Black</option>
+              <option>Color: White</option>
+            </select>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-2 pt-2">
+            <a href="https://wa.me/917671081520?text=I want to book this T-shirt" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">WhatsApp</a>
+            <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Add to Cart</button>
+            <button onclick="payWithRazorpay()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- You can duplicate this block for more products -->
+      <div class="border rounded-xl overflow-hidden shadow-md">
+        <img src="images/11.jpeg" alt="T-shirt 2" class="w-full h-64 object-cover" />
+        <div class="p-4 space-y-2">
+          <h4 class="text-xl font-semibold">Street Classic Tee</h4>
+          <p class="text-gray-600">Price: ₹599</p>
+          <div class="flex gap-2 text-sm">
+            <select class="border rounded px-2 py-1">
+              <option>Size: M</option>
+              <option>Size: L</option>
+              <option>Size: XL</option>
+            </select>
+            <select class="border rounded px-2 py-1">
+              <option>Color: Red</option>
+              <option>Color: Navy</option>
+            </select>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <a href="https://wa.me/917671081520?text=I want to book this T-shirt" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">WhatsApp</a>
+            <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Add to Cart</button>
+            <button onclick="payWithRazorpay()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- More products -->
+      <div class="border rounded-xl overflow-hidden shadow-md">
+        <img src="images/12.jpeg" alt="T-shirt 3" class="w-full h-64 object-cover" />
+        <div class="p-4 space-y-2">
+          <h4 class="text-xl font-semibold">Bold Street Tee</h4>
+          <p class="text-gray-600">Price: ₹549</p>
+          <div class="flex gap-2 text-sm">
+            <select class="border rounded px-2 py-1">
+              <option>Size: S</option>
+              <option>Size: M</option>
+              <option>Size: L</option>
+            </select>
+            <select class="border rounded px-2 py-1">
+              <option>Color: Grey</option>
+              <option>Color: Blue</option>
+            </select>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <a href="https://wa.me/917671081520?text=I want to book this T-shirt" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">WhatsApp</a>
+            <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Add to Cart</button>
+            <button onclick="payWithRazorpay()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-50 py-12 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-4">Contact Us</h3>
+      <p class="text-gray-600 mb-6">Reach out on WhatsApp or Email for custom orders or bulk inquiries.</p>
+      <p><strong>Phone:</strong> <a href="tel:+917671081520">+91 7671081520</a></p>
+      <p><strong>Email:</strong> <a href="mailto:kiran@kiso.in">kiran@kiso.in</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/wearkiso" target="_blank">@wearkiso</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-4">
+    <p>© 2025 KISO. All rights reserved.</p>
+  </footer>
+
+  <!-- Razorpay Dummy Payment -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    function payWithRazorpay() {
+      var options = {
+        key: "rzp_test_1234567890abcdef", // Replace with your Razorpay key
+        amount: 49900, // in paise (₹499)
+        currency: "INR",
+        name: "KISO Clothing",
+        description: "T-Shirt Purchase",
+        image: "https://your-logo-link.com/logo.png",
+        handler: function (response) {
+          alert("Payment successful: " + response.razorpay_payment_id);
+        },
+        prefill: {
+          name: "Customer",
+          email: "customer@example.com",
+          contact: "9876543210"
+        },
+        theme: {
+          color: "#000000"
+        }
+      };
+      var rzp = new Razorpay(options);
+      rzp.open();
+    }
+  </script>
+
+</body>
+</html>
